@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Circles</title>
+    <!--Loading paper.js-->
+    <script type="text/javascript" src="paper-full.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="circles.css">
+    <!-- Define inlined PaperScript associate it with myCanvas -->
+    <script type="text/paperscript" canvas="myCanvas">
+        var path = new Path(); 
+        path.strokeColor='black'; 
+        var start = new Point(0,0); 
+        path.moveTo(start); 
+        path.lineTo(start + [ 500, +50]);
+        var myCircle = new Path.Circle(new Point(100, 70), 100);
+        myCircle.fillColor = 'red';
+    </script>
+    
+    
+</head>
+
+<body>
+    <canvas id="myCanvas" resize></canvas>
+</body>
+
+</html>
